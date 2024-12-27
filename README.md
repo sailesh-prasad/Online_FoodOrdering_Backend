@@ -37,12 +37,12 @@ The Food Ordering System is a web-based application designed to streamline the p
    ```bash
    python manage.py runserver
 
-##For Testing
+## For Testing
 1. Run test command:
    ```bash
    python manage.py test
 
-##For API Swagger
+## For API Swagger
 1. Check the URL:
    ```bash
    localhost:8000/api/swagger/
