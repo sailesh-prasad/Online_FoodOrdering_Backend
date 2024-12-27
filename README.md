@@ -53,6 +53,7 @@ The Food Ordering System is a web-based application designed to streamline the p
 - **Admin**: Manage users, restaurants, and order records.
 
 ## Screenshots
+**Homepage Screenshot**:
 ![Screenshot 2024-12-27 173503](https://github.com/user-attachments/assets/522d3aee-8906-4ee3-b396-ab1f1358000a)
 ![Screenshot 2024-12-27 173532](https://github.com/user-attachments/assets/ad20ea88-ccd8-41ef-adf9-040e70c465fb)
 ![Screenshot 2024-12-27 173635](https://github.com/user-attachments/assets/f054e8f8-2e80-4f55-bec5-c25a962b60fc)
