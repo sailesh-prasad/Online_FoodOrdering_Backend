@@ -99,11 +99,6 @@ The goal of this project is to streamline the interaction between customers and 
    ```bash
    localhost:8000/api/swagger/
 
-## Usage
-- **Customer**: Register, log in, browse restaurants, place orders, and track delivery.
-- **Restaurant**: Manage menu items, view orders, and update statuses.
-- **Admin**: Manage users, restaurants, and order records.
-
 ## Development Workflow
 ### **1. Initial Setup:**
 - Set up the Django project and configure SQLite for initial development.
