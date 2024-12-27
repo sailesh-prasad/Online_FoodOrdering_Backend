@@ -37,6 +37,16 @@ The Food Ordering System is a web-based application designed to streamline the p
    ```bash
    python manage.py runserver
 
+##For Testing
+1. Run test command:
+   ```bash
+   python manage.py test
+
+##For API Swagger
+1. Check the URL:
+   ```bash
+   localhost:8000/api/swagger/
+
 ## Usage
 - **Customer**: Register, log in, browse restaurants, place orders, and track delivery.
 - **Restaurant**: Manage menu items, view orders, and update statuses.
