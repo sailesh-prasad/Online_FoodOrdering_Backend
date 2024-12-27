@@ -22,19 +22,19 @@ The Food Ordering System is a web-based application designed to streamline the p
    git clone https://github.com/pythonandspring/Food-ordering.git
 
 2. Navigate to the project directory:
-   '''bash
+   ```bash
    cd Food-ordering
 
 3. Install dependencies:
-   '''bash
+   ```bash
    pip install -r requirements.txt
 
 4. Run database migrations:
-   '''bash
+   ```bash
    python manage.py migrate
 
 5. Start the development server:
-   '''bash
+   ```bash
    python manage.py runserver
 
 ## Usage
