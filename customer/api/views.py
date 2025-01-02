@@ -5,6 +5,8 @@ from customer.models import customerUser,Contact,Place,City,State,Order,Customer
 from .serializers import *
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.authentication import TokenAuthentication
+from rest_framework.parsers import MultiPartParser, FormParser
+
 
 # A viewset for viewing and editing customer user instances.  
 class CustomerViewSet(viewsets.ModelViewSet):
@@ -12,6 +14,8 @@ class CustomerViewSet(viewsets.ModelViewSet):
     permission_classes = [IsAuthenticated]
     queryset = Customer.objects.all()
     serializer_class = CustomerSerializer
+    parser_classes = [MultiPartParser, FormParser]  
+
     
 # A viewset for viewing and editing contact instances.  
 class ContactViewSet(viewsets.ModelViewSet):
@@ -19,6 +23,7 @@ class ContactViewSet(viewsets.ModelViewSet):
     permission_classes = [IsAuthenticated]
     queryset = Contact.objects.all()
     serializer_class = ContactSerializer
+    parser_classes = [MultiPartParser, FormParser]
 
 # A viewset for viewing and editing customer user instances.  
 class CustomerUserViewSet(viewsets.ModelViewSet):
@@ -27,6 +32,7 @@ class CustomerUserViewSet(viewsets.ModelViewSet):
     permission_classes = [IsAuthenticated]
     queryset = customerUser.objects.all() 
     serializer_class = CustomerUserSerializer
+    parser_classes = [MultiPartParser, FormParser]
 
 # A viewset for viewing and editing state instances.
 class StateViewSet(viewsets.ModelViewSet): 
@@ -34,6 +40,7 @@ class StateViewSet(viewsets.ModelViewSet):
     permission_classes = [IsAuthenticated]
     queryset = State.objects.all() 
     serializer_class = StateSerializer
+    parser_classes = [MultiPartParser, FormParser]
 
 # A viewset for viewing and editing place instances.
 class PlaceViewSet(viewsets.ModelViewSet): 
@@ -41,6 +48,7 @@ class PlaceViewSet(viewsets.ModelViewSet):
     permission_classes = [IsAuthenticated]
     queryset = Place.objects.all() 
     serializer_class = PlaceSerializer
+    parser_classes = [MultiPartParser, FormParser]
 
 # A viewset for viewing and editing city instances.
 class CityViewSet(viewsets.ModelViewSet): 
@@ -48,6 +56,7 @@ class CityViewSet(viewsets.ModelViewSet):
     permission_classes = [IsAuthenticated]
     queryset = City.objects.all() 
     serializer_class = CitySerializer
+    parser_classes = [MultiPartParser, FormParser]
 
 # A viewset for viewing and editing order instances.
 class OrderViewSet(viewsets.ModelViewSet):
@@ -55,3 +64,4 @@ class OrderViewSet(viewsets.ModelViewSet):
     permission_classes = [IsAuthenticated]
     queryset = Order.objects.all()
     serializer_class = OrderSerializer
+    parser_classes = [MultiPartParser, FormParser]
