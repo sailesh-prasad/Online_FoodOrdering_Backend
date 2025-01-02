@@ -4,6 +4,7 @@ from delivery.models import DeliveryPerson, deliveryUser, Feedback, Contact, Del
 from delivery.api.serializers import DeliveryPersonSerializer, DeliveryUserSerializer, Feedback_dSerializer, Contact_dSerializer, DeliveryPersonLocationSerializer
 from rest_framework.authentication import TokenAuthentication
 from rest_framework.permissions import IsAuthenticated
+from rest_framework.parsers import MultiPartParser, FormParser
 
 # A viewset for viewing and editing delivery person instances.
 class DeliveryPersonViewSet(viewsets.ModelViewSet):
@@ -18,6 +19,7 @@ class DeliveryUserViewSet(viewsets.ModelViewSet):
     permission_classes = [IsAuthenticated]
     queryset = deliveryUser.objects.all()
     serializer_class = DeliveryUserSerializer
+    parser_classes = [MultiPartParser, FormParser]
 
 # A viewset for viewing and editing feedback instances.
 class Feedback_dViewSet(viewsets.ModelViewSet):
@@ -39,3 +41,4 @@ class DeliveryPersonLocationViewSet(viewsets.ModelViewSet):
     permission_classes = [IsAuthenticated]
     queryset = DeliveryPersonLocation.objects.all()
     serializer_class = DeliveryPersonLocationSerializer
+    parser_classes = [MultiPartParser, FormParser]
