@@ -110,8 +110,7 @@ DATABASES = {
     }
 }
 
-# your_project/settings.py
-
+# SWAGGER_SETTINGS dictionary contains configuration settings for Swagger documentation
 SWAGGER_SETTINGS = {
     'SECURITY_DEFINITIONS': {
         'Token': {
