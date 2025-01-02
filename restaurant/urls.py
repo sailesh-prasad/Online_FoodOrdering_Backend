@@ -1,5 +1,5 @@
 from django.urls import path, include
-from .api import urls as api_urls
+# from .api import urls as api_urls
 from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
