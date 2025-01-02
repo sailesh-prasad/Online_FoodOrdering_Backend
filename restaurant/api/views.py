@@ -5,6 +5,8 @@ from restaurant.models import Restaurant,Cart,Product,Payment,restaurantUser, fo
 from .serializers import  *
 from rest_framework.authentication import TokenAuthentication
 from rest_framework.permissions import IsAuthenticated
+from rest_framework.parsers import MultiPartParser, FormParser
+
 
 # A viewset for viewing and editing restaurant instances.
 class RestaurantViewSet(viewsets.ModelViewSet):
@@ -12,6 +14,8 @@ class RestaurantViewSet(viewsets.ModelViewSet):
     permission_classes = [IsAuthenticated]
     queryset = Restaurant.objects.all()
     serializer_class = RestaurantSerializer
+    parser_classes = [MultiPartParser, FormParser]
+
 
 # A viewset for viewing and editing restaurant user instances.
 class RestaurantUserViewSet(viewsets.ModelViewSet):
@@ -19,6 +23,8 @@ class RestaurantUserViewSet(viewsets.ModelViewSet):
     permission_classes = [IsAuthenticated]
     queryset = restaurantUser.objects.all()
     serializer_class = RestaurantUserSerializer
+    parser_classes = [MultiPartParser, FormParser]
+
 
 # A viewset for viewing and editing food items instances.
 class FoodItemsViewSet(viewsets.ModelViewSet):
@@ -26,6 +32,7 @@ class FoodItemsViewSet(viewsets.ModelViewSet):
     permission_classes = [IsAuthenticated]
     queryset = foodItems.objects.all()
     serializer_class = foodItemsSerializer
+    parser_classes = [MultiPartParser, FormParser]
 
 # A viewset for viewing and editing product instances.
 class ProductViewSet(viewsets.ModelViewSet):    
