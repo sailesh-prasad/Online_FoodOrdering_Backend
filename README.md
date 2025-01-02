@@ -63,29 +63,10 @@ The goal of this project is to streamline the interaction between customers and 
 - **Data Security**: Protection of customer, restaurant, and order data.
 
 ## Technologies Used
-<<<<<<< HEAD
-### **Frontend:**
-- **HTML, CSS, JavaScript**: For web development.
-
-### **Backend:**
-- **Django**: Framework for backend development, ensuring robust server-side functionality.
-- **Django REST Framework**: For creating the REST APIs that will connect the frontend and backend.
-
-### **Database:**
-- **SQLite**: For development and testing environments.
-
-### **Deployment:**
-- **Docker**: Containerization to ensure consistency across different environments (local, staging, production).
-
-## Version Control & IDE
-- **Version Control**: Git and GitHub to manage the codebase and collaboration.
-- **IDE**: Visual Studio Code for efficient development.
-=======
 - Frontend: HTML, CSS, JavaScript, Bootstrap
 - Backend: Django
 - Database: PostgreSQL
 - Deployment: Docker
->>>>>>> 5dc0270b47a6e5a1f78cbf5030194006c4076b21
 
 ## Installation and Setup
 1. Clone the repository:
@@ -108,16 +89,6 @@ The goal of this project is to streamline the interaction between customers and 
    ```bash
    python manage.py runserver
 
-## For Testing
-1. Run test command:
-   ```bash
-   python manage.py test
-
-## For API Swagger
-1. Check the URL:
-   ```bash
-   localhost:8000/api/swagger/
-
 ## Development Workflow
 ### **1. Initial Setup:**
 - Set up the Django project and configure SQLite for initial development.
@@ -135,22 +106,6 @@ The goal of this project is to streamline the interaction between customers and 
 - Containerize the application using Docker to ensure consistency across environments.
 - Test the application thoroughly before deploying to cloud platforms (e.g., Docker).
 
-<<<<<<< HEAD
-## System Design
-### **Architecture:**
-- **Modular**: Clear separation of concerns between frontend, backend, and database layers.
-- **Frontend**: Focus on user interface (UI) and interaction.
-- **Backend**: Manages business logic, handles data operations, and communicates with third-party APIs.
-- **Database**: Stores user, restaurant, and order-related data.
-- **Geolocation & Map Services**: Integrate third-party services like Google Maps API for delivery tracking.
-
-### **Layers:**
-1. **Presentation Layer**: The user interface that interacts with customers and restaurant staff.
-2. **Application Layer**: Implements the core business logic for order processing and management.
-3. **Data Layer**: Manages the database for user accounts, orders, restaurants, and geolocation data.
-
-=======
->>>>>>> 5dc0270b47a6e5a1f78cbf5030194006c4076b21
 ## Screenshots
 **Homepage**:
 ![Screenshot 2024-12-27 173503](https://github.com/user-attachments/assets/522d3aee-8906-4ee3-b396-ab1f1358000a)
@@ -180,23 +135,12 @@ The goal of this project is to streamline the interaction between customers and 
 ![Screenshot 2024-12-27 175402](https://github.com/user-attachments/assets/52556393-f408-46ec-b27a-b7bad31156a2)
 **Feedback Form**:
 ![Screenshot 2024-12-27 174139](https://github.com/user-attachments/assets/5c435e0b-73e5-41c1-97c8-eff3a976158f)
-<<<<<<< HEAD
-**Swagger**:
-![Screenshot 2024-12-27 200731](https://github.com/user-attachments/assets/e059c2ec-7a4f-4472-b312-20dedb609ea7)
-
-## Future Enhancements
-- **Payment Integration**: Integrate secure online payment gateways (e.g., Stripe or PayPal) to handle transactions directly through the platform.
-- **Advanced Analytics**: Provide restaurants with analytics on customer preferences, best-selling items, and order trends.
-- **Mobile Applications**: Develop iOS and Android apps to extend the platform’s reach.
-- **AI Recommendations**: Implement recommendation algorithms to suggest restaurants and menu items based on user preferences and past orders.
-=======
 
 ## Future Enhancements
 1. **Payment Integration**: Integrate secure online payment gateways (e.g., Stripe or PayPal) to handle transactions directly through the platform.
 2. **Advanced Analytics**: Provide restaurants with analytics on customer preferences, best-selling items, and order trends.
 3. **Mobile Applications**: Develop iOS and Android apps to extend the platform’s reach.
 4. **AI Recommendations**: Implement recommendation algorithms to suggest restaurants and menu items based on user preferences and past orders.
->>>>>>> 5dc0270b47a6e5a1f78cbf5030194006c4076b21
 
 ## Conclusion
 This project aims to provide a comprehensive solution for the food delivery industry, improving the user experience for customers and streamlining operations for restaurants. By leveraging modern web technologies, scalable architecture, and real-time tracking features, the platform is well-positioned to meet the demands of high traffic volumes while offering a seamless experience.
