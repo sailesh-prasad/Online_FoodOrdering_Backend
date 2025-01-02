@@ -10,23 +10,45 @@ class DeliveryPersonSerializer(serializers.ModelSerializer):
 
 class DeliveryUserSerializer(serializers.ModelSerializer):
     # Fields to be included in the serializer
-    state = serializers.CharField(source='state.name') 
-    city = serializers.CharField(source='city.name') 
-    place = serializers.SerializerMethodField()
+    
     class Meta:
         model = deliveryUser
-        fields = '__all__'
+        fields = [
+            'id', 'username', 'email', 'is_superuser', 'name', 'state', 'city', 'place', 
+            'latitude', 'longitude', 'address' ,'password', 'is_staff', 
+            'is_active', 'date_joined', 'last_login', 'is_user', 
+            'is_restaurant', 'is_delivery',
+        ]
+        read_only_fields = ['id', 'last_login', 'date_joined']
+        extra_kwargs = {
+            'password': {'write_only': True},  # Ensure password is write-only
+        }
 
-    #Method to get the place name    
-    def get_place(self, obj):
-        if obj.place.isdigit():
-            try:
-                place = Place.objects.get(id=int(obj.place))
-                return place.name
-            except Place.DoesNotExist:
-                return None
-        else:
-            return obj.place
+    def create(self, validated_data):
+        # Hash the password before saving
+        password = validated_data.pop('password', None)
+        instance = super().create(validated_data)
+        if password:
+            instance.set_password(password)
+            instance.save()
+        return instance
+
+    def update(self, instance, validated_data):
+        # Handle password hashing during updates
+        password = validated_data.pop('password', None)
+        instance = super().update(instance, validated_data)
+        if password:
+            instance.set_password(password)
+            instance.save()
+        return instance
+    
+    def to_representation(self, instance):
+        # Custom method to ensure the hashed password is included in the response
+        representation = super().to_representation(instance)
+        representation['password'] = instance.password  # Include hashed password in response
+        return representation
+    
+    
 
 class Feedback_dSerializer(serializers.ModelSerializer):
     class Meta:
